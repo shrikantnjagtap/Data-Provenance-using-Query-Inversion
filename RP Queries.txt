@@ -1,0 +1,12 @@
+//ASPJ
+select sum(billpayment.OrderAmt) as tot_amt from billpayment join customer on billpayment.bill_id=customer.cust_id group by billpayment.bill_id;
+
+//Inner Query
+SELECT A FROM R WHERE EXISTS (SELECT B FROM S);
+
+
+//Simple where
+select billpayment.orderamt*2 As two from billpayment,customer where billpayment.bill_id=customer.cust_id;
+
+//Union
+SELECT A FROM R UNION SELECT B FROM S UNION SELECT C FROM T;
